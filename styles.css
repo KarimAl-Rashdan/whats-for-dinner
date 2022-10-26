@@ -1,6 +1,8 @@
 /*WebPage Comp Format*/
-.background-image:assets/
-
+body {
+    background-image: url("assets/burger-friends.jpg");
+    background-size: cover;
+}
 
 /* font-family: 'Roboto', sans-serif;
 
