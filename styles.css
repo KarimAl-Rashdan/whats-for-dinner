@@ -1,9 +1,31 @@
 /*WebPage Comp Format*/
+html {
+    display: flex;
+}
+
 body {
     background-image: url("assets/burger-friends.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px;
+    height: 100vh;
+    width:100%;
 }
 
+h1 {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0fb9b1;
+    margin: 0px;
+    height: 35px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 17px;
+}
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
