@@ -32,28 +32,64 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
-    height: 250px;
+    height: 300px;
     margin: 160px;
 }
 
 .left-white-box {
     background-color: rgba(225, 225, 225, .9);
-    border: 10px solid blue;
+    /* border: 10px solid blue; */
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 30px;
+}
+
+span {
+    color: #ee5253;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    margin: 5px 15px;
+    padding: none;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+
+button {
+    margin: 5px 35px;
+    background-color: #0fb9b1;
+    border-radius: 5px;
+    width: 40%;
+    border: none;
+    padding: 5px 10px;
 }
 
 .right-white-box {
     background-color: rgba(225, 225, 225, .9);
     width: 40%;
-    border: 10px solid purple;
+    /* border: 10px solid purple; */
 }
 div > img {
     height: 200px;
     filter: opacity(0.5);
 }
-span {
-    color: #ee5253;
-}
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
