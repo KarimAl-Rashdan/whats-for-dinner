@@ -5,6 +5,13 @@ var mainButton = document.getElementById("radio2");
 var dessertButton = document.getElementById("radio3");
 var entireMealButton = document.getElementById("radio4");
 
+
+function getRandomIndex(array) {
+   var randomNumber =  Math.floor(Math.random() * array.length)
+   console.log(array[randomNumber])
+   return array[randomNumber]
+//    returns a random meal depending which array you pass in
+}
 // class DinnerType {
 //     constructor(input) {
 //         this.input = inputs
