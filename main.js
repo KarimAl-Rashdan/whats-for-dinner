@@ -6,6 +6,15 @@ var dessertButton = document.getElementById("radio3");
 var entireMealButton = document.getElementById("radio4");
 var letsCookButton = document.getElementById("lets-cook");
 
+// ----------Event Listeners---------//
+letsCookButton.addEventListener("click", function() {
+    hideImage()
+    getRandomIndex(array)
+    displayFood()
+})
+
+
+
 
 function getRandomIndex(array) {
    var randomNumber =  Math.floor(Math.random() * array.length)
