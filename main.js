@@ -9,6 +9,8 @@ var letsCookButton = document.getElementById("lets-cook");
 // -----Right Box Space----//
 var cookPotImage = document.getElementById("cookpot-image")
 var outputSpace = document.getElementById("right-white-box")
+var outputHeader = document.getElementById("output-header")
+var outputParagraph = document.getElementById("output-paragraph")
 // ----------Event Listeners---------//
 letsCookButton.addEventListener("click", function() {
     hideImage(event)
@@ -24,6 +26,8 @@ function hideImage(event) {
     event.preventDefault()
     console.log("hide image is firing")
     cookPotImage.classList.add("hidden")
+    outputHeader.classList.remove("hidden")
+    outputParagraph.classList.remove("hidden")
 //hides cookpot image
 }
 function radioButtonSelection() {
@@ -49,9 +53,10 @@ function getRandomMeal(mealOption) {
 //    returns a random meal depending which array you pass in
 }
 
-function displayFood(mealOutput) {
-    outputSpace.innerText = "hello"
-}
+// function displayFood(mealOutput) {
+    
+//     outputSpace.innerText = "hello"
+// }
 
 // class DinnerType {
 //     constructor(input) {
