@@ -12,7 +12,7 @@ var cookPotImage = document.getElementById("cookpot-image")
 // ----------Event Listeners---------//
 letsCookButton.addEventListener("click", function() {
     hideImage(event)
-    // getRandomIndex(array)
+    getRandomMeal(array)
     // displayFood()
 })
 
@@ -24,12 +24,12 @@ function hideImage(event) {
     cookPotImage.classList.add("hidden")
 
 }
-// function getRandomIndex(array) {
-//    var randomNumber =  Math.floor(Math.random() * array.length)
-//    console.log(array[randomNumber])
-//    return array[randomNumber]
-// //    returns a random meal depending which array you pass in
-// }
+function getRandomMeal(array) {
+   var randomNumber =  Math.floor(Math.random() * array.length)
+   console.log(array[randomNumber])
+   return array[randomNumber]
+//    returns a random meal depending which array you pass in
+}
 // class DinnerType {
 //     constructor(input) {
 //         this.input = inputs
