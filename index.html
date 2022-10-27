@@ -26,12 +26,17 @@
             <input type="radio" id="radio4" name="meal-option" value="Entire Meal"> Entire Meal
           </label>
         </fieldset>
-        <button class="lets-cook">LET'S COOK!</button>
+        <button class="lets-cook" id="lets-cook">LET'S COOK!</button>
       </form>
-      <div class="right-white-box">
-        <img class="cookpot-image" src="assets/cookpot.svg" alt="Cookpot image">
+      <div class="right-white-box" id="right-white-box">
+        <h1 class="output-header hidden" id="output-header">You should make:</h1>
+        <p class="output-paragraph hidden" id="output-paragraph"></p>
+        <img class="cookpot-image" id="cookpot-image" src="assets/cookpot.svg" alt="Cookpot image">
       </div>
     </section>
   </body>
-  <script type="text/javascript" src="main.js"></script>
-</html>
+  <script type="text/javascript" src="./src/side-dish.js"></script>
+  <script type="text/javascript" src="./src/main-dish.js"></script>
+  <script type="text/javascript" src="./src/dessert-dish.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+  </html>

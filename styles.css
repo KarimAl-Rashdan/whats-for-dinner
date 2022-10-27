@@ -84,6 +84,7 @@ button {
     background-color: rgba(225, 225, 225, .9);
     width: 40%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -91,6 +92,27 @@ button {
 div > img {
     height: 150px;
     filter: opacity(0.5);
+}
+
+div > h1 {
+    font-size: medium;
+    background-color: initial;
+    font-style: italic;
+    padding: 0px;
+    margin: 0px;
+    width: 45%;
+}
+
+div > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    margin: inherit;
+    width: 65%;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }
 
 /*-----------------------------------*/
