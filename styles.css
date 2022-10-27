@@ -26,6 +26,34 @@ h1 {
     justify-content: flex-start;
     padding: 17px;
 }
+
+.white-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 250px;
+    margin: 160px;
+}
+
+.left-white-box {
+    background-color: rgba(225, 225, 225, .9);
+    border: 10px solid blue;
+    width: 40%;
+}
+
+.right-white-box {
+    background-color: rgba(225, 225, 225, .9);
+    width: 40%;
+    border: 10px solid purple;
+}
+div > img {
+    height: 200px;
+    filter: opacity(0.5);
+}
+span {
+    color: #ee5253;
+}
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
