@@ -93,4 +93,8 @@ div > img {
     filter: opacity(0.5);
 }
 
+.hidden {
+    display: none;
+}
+
 /*-----------------------------------*/

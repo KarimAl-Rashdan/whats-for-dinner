@@ -1,27 +1,35 @@
 
 // --------Query Selectors---------//
+// -----Buttons-----//
 var sideButton = document.getElementById("radio1");
 var mainButton = document.getElementById("radio2");
 var dessertButton = document.getElementById("radio3");
 var entireMealButton = document.getElementById("radio4");
 var letsCookButton = document.getElementById("lets-cook");
+// -----Right Box Space----//
+var cookPotImage = document.getElementById("cookpot-image")
 
 // ----------Event Listeners---------//
 letsCookButton.addEventListener("click", function() {
-    hideImage()
-    getRandomIndex(array)
-    displayFood()
+    hideImage(event)
+    // getRandomIndex(array)
+    // displayFood()
 })
 
 
 
+function hideImage(event) {
+    event.preventDefault()
+    console.log("hide image is firing")
+    cookPotImage.classList.add("hidden")
 
-function getRandomIndex(array) {
-   var randomNumber =  Math.floor(Math.random() * array.length)
-   console.log(array[randomNumber])
-   return array[randomNumber]
-//    returns a random meal depending which array you pass in
 }
+// function getRandomIndex(array) {
+//    var randomNumber =  Math.floor(Math.random() * array.length)
+//    console.log(array[randomNumber])
+//    return array[randomNumber]
+// //    returns a random meal depending which array you pass in
+// }
 // class DinnerType {
 //     constructor(input) {
 //         this.input = inputs
@@ -34,10 +42,26 @@ function getRandomIndex(array) {
 //     }
 // }
 // var meal = new DinnerType("cheese")//change this.input to value and pass in value in instance
-// function radioButtonSelection() {
-//     if(document.getElementById("radio1").checked) {
-//         this.input = this.getRandomIndex(sides)
-//         console.log("Side is checked", this.input)
+
+
+
+
+
+
+//var sideButton = document.getElementById("radio1")
+function radioButtonSelection() {
+    if(sideButton.checked) {
+        
+        console.log("Side is checked")
+    } else if (mainButton.checked) {
+        console.log("Main is checked")
+    } else if (dessertButton) {
+        console.log("Dessert is checked")
+    } else if (entireMealButton) {
+        console.log("Entire meal is checked")
+    }
+
+}
 //     } else if (document.getElementById("radio2").checked) {
 //         this.input = this.getRandomIndex(mains)
 //         console.log("Main dish is checked", this.input)
@@ -57,6 +81,3 @@ function getRandomIndex(array) {
 //  -------------PseudoCode---------------
 /*When a user selects a dish option (don’t worry about “Entire Meal”) and then clicks the “Let’s Cook!” button, the user sees a random dish from the list of possible dishes for that category
 When the dish name appears, the cookpot icon disappears*/
-
-
-
