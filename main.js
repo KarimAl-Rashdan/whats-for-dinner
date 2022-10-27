@@ -41,9 +41,10 @@ function radioButtonSelection() {
         mealOption = sides
     } else if (mainButton.checked) {
         mealOption = mains
-    } else if (dessertButton) {
+    } else if (dessertButton.checked) {
         mealOption = desserts
-    } else if (entireMealButton) {
+    } else if (entireMealButton.checked) {
+        fullCourse()
         mealOption = entireMeal
     }
 }
@@ -57,3 +58,18 @@ function getRandomMeal(mealOption) {
 function displayFood(mealOutput) {
     outputParagraph.innerText = `${mealOutput}!`
 }
+
+function fullCourse() {
+    fullMeal = {
+        side: getRandomMeal(sides),
+        main: getRandomMeal(mains),
+        dessert: getRandomMeal(desserts),
+    }
+    entireMeal.push(fullMeal)
+    console.log(entireMeal)
+}
+
+function displayEntireMeal
+
+// When the user selects the “Entire Meal” option and then clicks the “Let’s Cook!” button, the user sees a message with a side, main and dessert option from the lists of possible dishes for all categories
+// When the meal items appear, the cookpot icon disappears 
