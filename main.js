@@ -50,7 +50,7 @@ function getRandomMeal(mealOption) {
 }
 
 function displayFood(mealOutput) {
-
+    outputSpace.innerText = "hello"
 }
 
 // class DinnerType {
