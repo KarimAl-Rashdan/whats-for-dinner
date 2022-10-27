@@ -8,28 +8,51 @@ var entireMealButton = document.getElementById("radio4");
 var letsCookButton = document.getElementById("lets-cook");
 // -----Right Box Space----//
 var cookPotImage = document.getElementById("cookpot-image")
-
+var outputSpace = document.getElementById("right-white-box")
 // ----------Event Listeners---------//
 letsCookButton.addEventListener("click", function() {
     hideImage(event)
-    getRandomMeal(array)
-    // displayFood()
+    radioButtonSelection()
+    getRandomMeal(mealOption)
+    displayFood(mealOutput)
 })
 
-
+// ----------Global Variables--------//
+var mealOption;
 
 function hideImage(event) {
     event.preventDefault()
     console.log("hide image is firing")
     cookPotImage.classList.add("hidden")
+//hides cookpot image
+}
+function radioButtonSelection() {
+    if(sideButton.checked) {
+        mealOption = sides
+        console.log("Side is checked")
+    } else if (mainButton.checked) {
+        mealOption = mains
+        console.log("Main is checked")
+    } else if (dessertButton) {
+        mealOption = desserts
+        console.log("Dessert is checked")
+    } else if (entireMealButton) {
+        console.log("Entire meal is checked")
+    }
 
 }
-function getRandomMeal(array) {
-   var randomNumber =  Math.floor(Math.random() * array.length)
-   console.log(array[randomNumber])
-   return array[randomNumber]
+function getRandomMeal(mealOption) {
+   var randomNumber =  Math.floor(Math.random() * mealOption.length)
+   console.log(mealOption[randomNumber])
+   var mealOutput = mealOption[randomNumber]
+   return mealOutput
 //    returns a random meal depending which array you pass in
 }
+
+function displayFood(mealOutput) {
+
+}
+
 // class DinnerType {
 //     constructor(input) {
 //         this.input = inputs
@@ -48,20 +71,7 @@ function getRandomMeal(array) {
 
 
 
-//var sideButton = document.getElementById("radio1")
-function radioButtonSelection() {
-    if(sideButton.checked) {
-        
-        console.log("Side is checked")
-    } else if (mainButton.checked) {
-        console.log("Main is checked")
-    } else if (dessertButton) {
-        console.log("Dessert is checked")
-    } else if (entireMealButton) {
-        console.log("Entire meal is checked")
-    }
 
-}
 //     } else if (document.getElementById("radio2").checked) {
 //         this.input = this.getRandomIndex(mains)
 //         console.log("Main dish is checked", this.input)
