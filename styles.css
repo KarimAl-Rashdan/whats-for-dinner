@@ -95,10 +95,20 @@ div > img {
 }
 
 div > h1 {
+    font-size: medium;
     background-color: initial;
     font-style: italic;
     padding: 0px;
     margin: 0px;
+    width: 45%;
+}
+
+div > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    margin: inherit;
+    width: 65%;
+    font-weight: bold;
 }
 
 .hidden {
