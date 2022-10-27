@@ -4,6 +4,7 @@ var sideButton = document.getElementById("radio1");
 var mainButton = document.getElementById("radio2");
 var dessertButton = document.getElementById("radio3");
 var entireMealButton = document.getElementById("radio4");
+var letsCookButton = document.getElementById("lets-cook");
 
 
 function getRandomIndex(array) {
