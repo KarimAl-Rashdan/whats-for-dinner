@@ -21,8 +21,8 @@ letsCookButton.addEventListener("click", function(event) {
     event.preventDefault()
     hideImage()
     radioButtonSelection()
-    getRandomMeal(mealOption)
-    displayFood(mealOutput)
+    // getRandomMeal(mealOption)
+    // displayFood(mealOutput)
 })
 
 // ----------Global Variables--------//
@@ -39,13 +39,20 @@ function hideImage() {
 function radioButtonSelection() {
     if(sideButton.checked) {
         mealOption = sides
+        getRandomMeal()
+        displayFood(mealOutput)
     } else if (mainButton.checked) {
         mealOption = mains
+        getRandomMeal()
+        displayFood(mealOutput)
     } else if (dessertButton.checked) {
         mealOption = desserts
+        getRandomMeal()
+        displayFood(mealOutput)
     } else if (entireMealButton.checked) {
         fullCourse()
-        mealOption = entireMeal
+        getRandomCourse(entireMeal)
+        displayEntireMeal(courseOutput)
     }
 }
 
@@ -55,9 +62,16 @@ function getRandomMeal(mealOption) {
    return mealOutput
 }
 
+function getRandomCourse(entireMeal) {
+    var randomNum = Math.floor(Math.random() * entireMeal.length)
+    courseOutput = entireMeal[randomNum]
+    return courseOutput
+}
+
 function displayFood(mealOutput) {
     outputParagraph.innerText = `${mealOutput}!`
-}
+    }
+
 
 function fullCourse() {
     fullMeal = {
@@ -69,7 +83,11 @@ function fullCourse() {
     console.log(entireMeal)
 }
 
-function displayEntireMeal
+function displayEntireMeal(courseOutput) {
+    console.log(courseOutput)
+    outputParagraph.innerText = ""
+    outputParagraph.innerText = `${courseOutput.main} with a side of ${courseOutput.side} and ${courseOutput.dessert} for dessert!`
+}
 
 // When the user selects the “Entire Meal” option and then clicks the “Let’s Cook!” button, the user sees a message with a side, main and dessert option from the lists of possible dishes for all categories
 // When the meal items appear, the cookpot icon disappears 
