@@ -30,7 +30,7 @@ var mealOption;
 var mealOutput;
 var entireMeal = []
 
-function hideImage() {
+function hideImage() { //hide Image function looks good no refactoring necessary
     cookPotImage.classList.add("hidden")
     outputHeader.classList.remove("hidden")
     outputParagraph.classList.remove("hidden")
@@ -38,13 +38,18 @@ function hideImage() {
 
 function radioButtonSelection() {
     if(sideButton.checked) {
-        mealOption = sides
+        getRandomMeal(sides)
+        displayFood(mealOutput)
     } else if (mainButton.checked) {
-        mealOption = mains
-    } else if (dessertButton) {
-        mealOption = desserts
-    } else if (entireMealButton) {
-        mealOption = entireMeal
+        getRandomMeal(mains)
+        displayFood(mealOutput)
+    } else if (dessertButton.checked) {
+        getRandomMeal(desserts)
+        displayFood(mealOutput)
+    } else if (entireMealButton.checked) {
+        fullCourse()
+        getRandomMeal(entireMeal)
+        displayFood(mealOutput)
     }
 }
 
@@ -55,5 +60,19 @@ function getRandomMeal(mealOption) {
 }
 
 function displayFood(mealOutput) {
-    outputParagraph.innerText = `${mealOutput}!`
+    if(sideButton.checked || mainButton.checked ||dessertButton.checked) {
+        outputParagraph.innerText = `${mealOutput}!`
+    } else if (entireMealButton.checked) {
+        outputParagraph.innerText = ""
+        outputParagraph.innerText = `${mealOutput.main} with a side of ${mealOutput.side} and ${mealOutput.dessert} for dessert!`
+    }
+}
+
+function fullCourse() {
+    fullMeal = {
+        side: getRandomMeal(sides),
+        main: getRandomMeal(mains),
+        dessert: getRandomMeal(desserts),
+    }
+    entireMeal.push(fullMeal)
 }
