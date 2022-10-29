@@ -56,16 +56,15 @@ function radioButtonSelection() {
 function getRandomMeal(mealOption) {
    var randomNumber =  Math.floor(Math.random() * mealOption.length)
    mealOutput = mealOption[randomNumber]
-   console.log(mealOutput)
    return mealOutput
 }
 
 function displayFood(mealOutput) {
     if(sideButton.checked || mainButton.checked ||dessertButton.checked) {
-    outputParagraph.innerText = `${mealOutput}!`
+        outputParagraph.innerText = `${mealOutput}!`
     } else if (entireMealButton.checked) {
-    outputParagraph.innerText = ""
-    outputParagraph.innerText = `${mealOutput.main} with a side of ${mealOutput.side} and ${mealOutput.dessert} for dessert!`
+        outputParagraph.innerText = ""
+        outputParagraph.innerText = `${mealOutput.main} with a side of ${mealOutput.side} and ${mealOutput.dessert} for dessert!`
     }
 }
 
@@ -76,5 +75,4 @@ function fullCourse() {
         dessert: getRandomMeal(desserts),
     }
     entireMeal.push(fullMeal)
-    console.log(entireMeal)
 }
