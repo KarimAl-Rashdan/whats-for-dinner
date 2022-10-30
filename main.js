@@ -39,18 +39,15 @@ function hideImage() { //hide Image function looks good no refactoring necessary
 function radioButtonSelection() {
     if(sideButton.checked) {
         getRandomMeal(sides)
-        displayFood(mealOutput)
     } else if (mainButton.checked) {
         getRandomMeal(mains)
-        displayFood(mealOutput)
     } else if (dessertButton.checked) {
         getRandomMeal(desserts)
-        displayFood(mealOutput)
     } else if (entireMealButton.checked) {
         fullCourse()
         getRandomMeal(entireMeal)
-        displayFood(mealOutput)
     }
+    displayFood(mealOutput)
 }
 
 function getRandomMeal(mealOption) {
